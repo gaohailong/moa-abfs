@@ -37,8 +37,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="196" column="67" selection-start-line="196" selection-start-column="67" selection-end-line="196" selection-end-column="67" />
+            <state relative-caret-position="318">
+              <caret line="310" column="24" selection-start-line="310" selection-start-column="24" selection-end-line="310" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/lang/ProcessBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="353">
+              <caret line="1055" selection-start-line="1055" selection-end-line="1055" />
             </state>
           </provider>
         </entry>
@@ -73,6 +82,7 @@
       <find>release</find>
       <find>--release</find>
       <find>surefire</find>
+      <find>pdflatex</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -191,12 +201,6 @@
             <path>
               <item name="moa-pom" type="b2602c69:ProjectViewProjectNode" />
               <item name="moa-abfs-master" type="462c0819:PsiDirectoryNode" />
-              <item name="moa" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="moa-pom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="moa-abfs-master" type="462c0819:PsiDirectoryNode" />
               <item name="weka-package" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -307,12 +311,12 @@
       <workItem from="1590715326298" duration="457000" />
       <workItem from="1590715840042" duration="938000" />
       <workItem from="1590716791648" duration="105000" />
-      <workItem from="1590717059526" duration="3407000" />
+      <workItem from="1590717059526" duration="4224000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13623000" />
+    <option name="totallyTimeSpent" value="14440000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -326,7 +330,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.273021" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.273021" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -343,7 +347,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32876712" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32876712" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32876712" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -589,10 +593,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/lang/ProcessBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="1055" selection-start-line="1055" selection-end-line="1055" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="196" column="67" selection-start-line="196" selection-start-column="67" selection-end-line="196" selection-end-column="67" />
+        <state relative-caret-position="318">
+          <caret line="310" column="24" selection-start-line="310" selection-start-column="24" selection-end-line="310" selection-end-column="24" />
         </state>
       </provider>
     </entry>
