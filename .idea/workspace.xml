@@ -36,24 +36,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/moa/src/main/java/moa/core/FeatureSelectionUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="69" column="35" lean-forward="true" selection-start-line="69" selection-start-column="35" selection-end-line="69" selection-end-column="35" />
+            <state relative-caret-position="585">
+              <caret line="39" column="30" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1384#1392#0" expanded="true" />
-                <element signature="e#1436#1444#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/moa/src/main/java/moa/tasks/EvaluateFeatureSelectionStability.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="366" column="8" lean-forward="true" selection-start-line="366" selection-start-column="8" selection-end-line="366" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1437#1446#0" expanded="true" />
+                <element signature="e#1491#1500#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -391,12 +379,12 @@
       <workItem from="1590715326298" duration="457000" />
       <workItem from="1590715840042" duration="938000" />
       <workItem from="1590716791648" duration="105000" />
-      <workItem from="1590717059526" duration="5388000" />
+      <workItem from="1590717059526" duration="5747000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15604000" />
+    <option name="totallyTimeSpent" value="15963000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -688,9 +676,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/Set.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="94" column="8" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/moa/src/main/java/moa/tasks/EvaluateFeatureSelectionStability.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
+        <state relative-caret-position="8">
           <caret line="366" column="8" lean-forward="true" selection-start-line="366" selection-start-column="8" selection-end-line="366" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -700,12 +695,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/moa/src/main/java/moa/core/FeatureSelectionUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="69" column="35" lean-forward="true" selection-start-line="69" selection-start-column="35" selection-end-line="69" selection-end-column="35" />
+        <state relative-caret-position="585">
+          <caret line="39" column="30" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1384#1392#0" expanded="true" />
-            <element signature="e#1436#1444#0" expanded="true" />
+            <element signature="e#1437#1446#0" expanded="true" />
+            <element signature="e#1491#1500#0" expanded="true" />
           </folding>
         </state>
       </provider>

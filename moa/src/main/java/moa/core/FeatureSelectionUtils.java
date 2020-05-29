@@ -50,10 +50,9 @@ public class FeatureSelectionUtils {
     public static double stddev(double[] array, double mean) {
         int total = 0;
         for (int i = 0; i < array.length; i++) {
-            total += (array[i] - mean) * (array[i] - mean);   //求出方差，如果要计算方差的话这一步就可以了
+            total += (array[i] - mean) * (array[i] - mean);
         }
-        double standardDeviation = Math.sqrt(total / array.length);   //求出标准差
-        return standardDeviation;
+        return Math.sqrt(total / array.length);
     }
 
     /**
