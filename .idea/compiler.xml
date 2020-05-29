@@ -10,7 +10,7 @@
         <module name="weka-package" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8">
+    <bytecodeTargetLevel target="1.8">
       <module name="moa" target="1.8" />
       <module name="moa-pom" target="1.8" />
       <module name="weka-package" target="1.8" />
