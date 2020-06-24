@@ -6,13 +6,7 @@ import com.github.javacliparser.IntOption;
 import com.github.javacliparser.StringOption;
 import com.yahoo.labs.samoa.instances.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Random;
-import java.util.TreeSet;
+import java.util.*;
 
 import moa.core.FeatureSelectionUtils;
 import moa.core.InstanceExample;
@@ -23,6 +17,7 @@ import moa.tasks.TaskMonitor;
 import weka.core.FastVector;
 
 /**
+ *
  * @author Jean Paul Barddal
  */
 public class BG2 extends AbstractOptionHandler implements
@@ -42,14 +37,14 @@ public class BG2 extends AbstractOptionHandler implements
             = new StringOption("relevantFeatures", 'f', "", "");
 
     public IntOption numFeaturesOption
-            = new IntOption("numFeatures", 'F', "", 0, 0, 1024);
+            = new IntOption("numFeatures", 'F', "", 100, 0, 1024);
 
     public IntOption numRedundantFeaturesOption
             = new IntOption("numRedundantFeatures", 'R', "", 0, 0, 1000);
 
     public FloatOption redundancyNoiseProbabilityOption
             = new FloatOption("redundancyNoiseProbability", 'w', "",
-            0.1, 0.0, 1.0);
+                    0.1, 0.0, 1.0);
 
     protected InstancesHeader streamHeader;
 
@@ -62,19 +57,27 @@ public class BG2 extends AbstractOptionHandler implements
 
     int[] relevantsInts;
     int[] irrelevantsInts;
+    int numRelavant = 3;
 
     @Override
     protected void prepareForUseImpl(TaskMonitor monitor,
-                                     ObjectRepository repository) {
+            ObjectRepository repository) {
 
         // generate header
         FastVector attributes = new FastVector();
         this.values = new FastVector();
         values.add("F");
         values.add("T");
-
-
-        HashSet<Integer> indicesRelevants = new HashSet<>();
+        
+        StringBuilder str = new StringBuilder();
+        List<Integer> indicesRelevants = new ArrayList<>();
+        Random random = new Random(1);
+        int part = numFeaturesOption.getValue()/(numRelavant+1);
+        for (int i=0; i<numRelavant; i++) {
+            int idx = random.nextInt(part) + part*i;
+            str.append(idx+";");
+        }
+        this.relevantFeaturesOption.setValue(str.toString().substring(0, str.toString().length()-1));
         String indices[] = this.relevantFeaturesOption.getValue().split(";");
         for (String strIndex : indices) {
             if (!strIndex.equals("")) {
@@ -83,14 +86,12 @@ public class BG2 extends AbstractOptionHandler implements
             }
         }
 
-        if (indicesRelevants.size() != 3) {
-            throw new IllegalArgumentException("This generator requires " +
-                    "exactly 3 relevant features.");
-        }
+        if(indicesRelevants.size() != 3) throw new IllegalArgumentException("This generator requires " +
+                "exactly 3 relevant features.");
 
         relevantsInts = new int[indicesRelevants.size()];
         int ii = 0;
-        for (Integer index : indicesRelevants) {
+        for(Integer index : indicesRelevants){
             relevantsInts[ii] = index;
             ii++;
         }
@@ -98,7 +99,7 @@ public class BG2 extends AbstractOptionHandler implements
         irrelevantsInts = new int[numFeaturesOption.getValue() - relevantsInts.length];
         int index = 0;
         for (int i = 0; i < numFeaturesOption.getValue(); i++) {
-            if (!FeatureSelectionUtils.contains(i, relevantsInts)) {
+            if(!FeatureSelectionUtils.contains(i, relevantsInts)){
                 irrelevantsInts[index] = i;
                 index++;
             }

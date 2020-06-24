@@ -6,13 +6,7 @@ import com.github.javacliparser.IntOption;
 import com.github.javacliparser.StringOption;
 import com.yahoo.labs.samoa.instances.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Random;
-import java.util.TreeSet;
+import java.util.*;
 
 import moa.core.FeatureSelectionUtils;
 import moa.core.InstanceExample;
@@ -20,7 +14,6 @@ import moa.core.ObjectRepository;
 import moa.options.AbstractOptionHandler;
 import moa.streams.InstanceStream;
 import moa.tasks.TaskMonitor;
-//import org.apache.commons.collections15.map.FastHashMap;
 import weka.core.FastVector;
 
 /**
@@ -41,7 +34,7 @@ public class BG extends AbstractOptionHandler implements
             'n', "Percentage of noise to add to the data.", 10, 0, 100);
 
     public IntOption numFeaturesOption
-            = new IntOption("numFeatures", 'F', "", 0, 0, 1024);
+            = new IntOption("numFeatures", 'F', "", 100, 0, 1024);
 
     public StringOption relevantFeaturesOption
             = new StringOption("relevantFeatures", 'f', "", "");
@@ -65,6 +58,7 @@ public class BG extends AbstractOptionHandler implements
 
     int[] relevantsInts;
     int[] irrelevantsInts;
+    int numRelavant = 5;
 
     @Override
     protected void prepareForUseImpl(TaskMonitor monitor,
@@ -75,7 +69,15 @@ public class BG extends AbstractOptionHandler implements
         values.add("T");
         values.add("F");
 
-        HashSet<Integer> indicesRelevants = new HashSet<>();
+        List<Integer> indicesRelevants = new ArrayList<>();
+        StringBuilder str = new StringBuilder();
+        Random random = new Random(1);
+        int part = numFeaturesOption.getValue()/(numRelavant+1);
+        for (int i=0; i<numRelavant; i++) {
+            int idx = random.nextInt(part) + part*i;
+            str.append(idx+";");
+        }
+        this.relevantFeaturesOption.setValue(str.toString().substring(0, str.toString().length()-1));
 //        namesRelevants = new HashSet<>();
         String indices[] = this.relevantFeaturesOption.getValue().split(";");
 
